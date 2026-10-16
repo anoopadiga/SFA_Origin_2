@@ -1,0 +1,21 @@
+/* recentlyOpenedUsers.css */
+.user-item {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.user-name {
+    margin-left: 8px;
+    margin-bottom: 8px;
+    text-decoration: underline; /* Add an underline to make it look like a link */
+    color: #0066cc; /* Add a color to mimic link color */
+    cursor: pointer;
+}
+
+.user-name:hover {
+    text-decoration: none; /* Remove underline on hover if not desired */
+}
+
+.line-item {
+    margin-bottom: 8px;
+}

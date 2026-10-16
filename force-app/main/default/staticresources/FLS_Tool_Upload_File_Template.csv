@@ -1,0 +1,12 @@
+PermissionsEdit,PermissionsRead,SobjectType,Field
+TRUE,TRUE,Asset,Asset.Description
+TRUE,TRUE,Account,Account.Fax
+FALSE,TRUE,Contact,Contact.Fax
+TRUE,TRUE,Lead,Lead.Fax
+TRUE,TRUE,Account,Account.Industry
+FALSE,FALSE,Lead,Lead.Industry
+FALSE,FALSE,Lead,Lead.LeadSource
+FALSE,FALSE,Contact,Contact.LeadSource
+FALSE,FALSE,Account,Account.Phone
+TRUE,TRUE,Lead,Lead.Phone
+TRUE,TRUE,Contact,Contact.Phone

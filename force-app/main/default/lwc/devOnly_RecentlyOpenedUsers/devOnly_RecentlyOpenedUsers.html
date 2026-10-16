@@ -1,0 +1,46 @@
+<!--
+  @description       : Component HTML to display recently viewed users.
+  @author            : anoop.adiga@accenture.com
+  @last modified on  : 31-10-2023
+	---------------------------------------------------------
+	Version History:
+	Anoop Adiga 	31-10-2023		Initial Version.
+-->
+<template>
+    <lightning-card title="Recently Opened Users">
+        <div class="slds-align_absolute-center">
+            <lightning-button-icon
+                class="refresh-button"
+                icon-name="utility:refresh"
+                variant="bare"
+                title="Refresh"
+                alternative-text="Refresh the list"
+                onclick={refreshUsers}>
+            </lightning-button-icon>
+        </div>
+        <lightning-layout>
+            <lightning-layout-item size="12" padding="around-small">
+                <ul>
+                    <template for:each={recentUsers} for:item="user">
+                        <li key={user.Id} class="line-item">
+                            <a href="javascript:void(0);" onclick={handleUserClick} data-id={user.Id}>
+
+																<lightning-icon 
+                                    icon-name="standard:user"
+                                    size="medium"
+                                    variant="border-filled" 
+                                    alternative-text="User Icon"
+                                    title="User">
+                                </lightning-icon>
+
+																<span class="user-name">
+																		{user.Name}
+																</span>
+                            </a>
+                        </li>
+                    </template>
+                </ul>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

@@ -1,0 +1,21 @@
+<!-- accountCreationWizard.html -->
+<template>
+    <!-- Step 1: Create/Choose HCO -->
+    <div if:true={showStep1}>
+        <!-- HCO Lookup/Input Component -->
+				<c-hco-lookup-component country={userCountry} onhcoselection={handleHCOSelection}></c-hco-lookup-component>
+    </div>
+
+    <!-- Step 2: Add HCPs -->
+    <div if:true={showStep2}>
+        <!-- Form to add multiple HCPs -->
+    </div>
+
+    <!-- Step 3: Display Added HCPs -->
+    <div if:true={showStep3}>
+        <!-- Table to display added HCPs -->
+    </div>
+
+    <!-- Submit Button -->
+    <lightning-button label="Submit" onclick={handleSubmit}></lightning-button>
+</template>
